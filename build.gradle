@@ -53,7 +53,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 // 하단의 코드들은  Spring Boot 프로젝트가 빌드 될 때 React 프로젝트를 먼저 빌드하고 결과를
-// Spring Boot 프로젝트에 포함시킨다.
+// Spring Boot 프로젝트에 포함시킨다
 // gradlew build 명령어로 빌드 실행
 // 성공시 아래의 명령어 실행
 // java -jar build/libs/capstone_project-0.0.1-SNAPSHOT.jar
