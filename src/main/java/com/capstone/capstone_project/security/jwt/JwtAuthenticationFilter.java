@@ -21,6 +21,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 /**
  * JWT 토큰의 유효성을 검사하고, 인증
+ * JwtAuthenticationFilter는 JWT 토큰의 유효성을 검사하고 인증을 처리하는 역할
+ * 요청 헤더에서 토큰을 추출하고, 추출된 토큰을 사용하여 사용자의 인증을 시도
+ * 인증이 성공하면 Spring Security의 SecurityContextHolder에 사용자 정보를 설정하여 현재 사용자의 인증을 처리
+ * 필터 체인을 통해 요청과 응답이 계속 전달될 수 있도록 처리합니다. 이를 통해 보호된 엔드포인트에 대한 접근이 허용
  */
 
 @Component
