@@ -1,6 +1,8 @@
 package com.capstone.capstone_project.controller;
 
-
+/*
+ * 레시피 게시판 댓글 기능을 처리하는 컨트롤러
+ */
 import com.capstone.capstone_project.dto.request.recboardcomment.RecBoardCommentDTO;
 import com.capstone.capstone_project.dto.response.recboardcomment.RecResBoardCommentDTO;
 import com.capstone.capstone_project.entity.MemberEntity;
