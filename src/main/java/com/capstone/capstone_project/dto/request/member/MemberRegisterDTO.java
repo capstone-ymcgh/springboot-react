@@ -1,6 +1,6 @@
 package com.capstone.capstone_project.dto.request.member;
 
-//회원 가입 요청
+//회원 가입 요청.
 
 import com.capstone.capstone_project.common.Role;
 import com.capstone.capstone_project.entity.MemberEntity;
