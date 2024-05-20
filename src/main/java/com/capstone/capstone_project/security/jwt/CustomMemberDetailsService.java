@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * DaoAuthenticationProvider 구현
+ * 사용자 인증 및 권한 부여를 위한 사용자 정보를 검색하기 위해 UserDetailsService를 구현한 CustomMemberDetailsService를 추가
  */
 @Service
 public class CustomMemberDetailsService implements UserDetailsService {
