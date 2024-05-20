@@ -1,5 +1,9 @@
 package com.capstone.capstone_project.common.exception;
 
+/*
+ * 리소스를 찾을 수 없는 예외를 처리하기 위한 커스텀 예외 클래스를 생성
+ */
+
 public class ResourceNotFoundException extends  RuntimeException{
     private static final long serialVersionUID = 1L;
 
