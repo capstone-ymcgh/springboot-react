@@ -2,7 +2,7 @@ package com.capstone.capstone_project.dto.request.recipeboard;
 
 
 /*
- * 게시글 수정 요청, 작성자는 Authenication을 받음
+ * 게시글 수정 요청, 작성자는 Authenication을 받음.
  */
 
 
