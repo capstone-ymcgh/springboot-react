@@ -2,7 +2,7 @@ package com.capstone.capstone_project.dto.request.recipeboard;
 
 
 /*
- * 검색 요청에 대한 DTO , 검색 조건이 늘어날 수도 있기 때문에 객체로 생성
+ * 검색 요청에 대한 DTO , 검색 조건이 늘어날 수도 있기 때문에 객체로 생성.
  */
 
 import lombok.Builder;
