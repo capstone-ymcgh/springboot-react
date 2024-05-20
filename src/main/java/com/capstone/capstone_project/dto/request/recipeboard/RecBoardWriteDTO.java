@@ -2,7 +2,7 @@ package com.capstone.capstone_project.dto.request.recipeboard;
 
 
 /*
- * 게시글 등록 요청
+ * 게시글 등록 요청.
  */
 
 import com.capstone.capstone_project.entity.RecBoardEntity;
