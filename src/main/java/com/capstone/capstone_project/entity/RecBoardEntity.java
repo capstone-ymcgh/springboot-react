@@ -1,6 +1,8 @@
 package com.capstone.capstone_project.entity;
 
-
+/*
+ * 게시글을 나타내는 entity
+ */
 import com.capstone.capstone_project.common.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
