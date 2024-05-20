@@ -1,0 +1,51 @@
+.Recipe-recommendation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1400px;
+    height: 1000px;
+    background-color: red;
+}
+.r1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+    height: 600px;
+    background-color: blue;
+    margin-top: -360px;
+    margin-right: 730px;
+    flex-direction: column;
+}
+.r1-img{
+    width: 98%; /* 부모 요소의 너비를 꽉 채움 */
+    height: 70%; /* 부모 요소의 높이를 꽉 채움 */
+    object-fit: cover; /* 부모 요소의 비율을 유지하면서 이미지를 채움 */
+    overflow: hidden;
+    margin-bottom: 23%;
+}
+.r1-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    margin-right: 70%;
+    margin-top: -20%;
+    font-size: 5em;
+}
+.r2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 60px;
+    background-color: blue;
+
+    flex-direction: column;
+}

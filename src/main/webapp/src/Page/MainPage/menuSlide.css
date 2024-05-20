@@ -1,0 +1,79 @@
+.swiper swiper-initialized swiper-horizontal swiper-backface-hidden menuSlide-swiper{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.menuSlide-contanier{
+    width: 1500px;
+    height: 100%;
+
+}
+.menuSlide-swiper{
+    width: 1400px;
+    height: 100%;
+    margin-bottom: 50px;
+    margin-top: -5px;
+}
+.swiper1 {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide1 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.append-buttons1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.append-buttons1 button {
+
+    cursor: pointer;
+    border: 1px solid #ffcc6d;
+    color: #ffcc6d;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+
+    font-size: 13px;
+}
+.menu-slide{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    width: 100%;
+    height: 300px;
+}
+.swiper-button-prev{
+    color: #ffcc6d;
+    position:flex;
+    top: 50%; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+}
+.swiper-button-next{
+    color: #ffcc6d;
+    position:flex;
+    top: 50%; /* Adjust as needed */
+    right: 0; /* Adjust as needed */
+}

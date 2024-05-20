@@ -1,0 +1,97 @@
+.dietcalendar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #f8f9fa;
+    width: 1300px;
+    height: 1200px;
+}
+.dietcalendar-add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#ffcc6d;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: none;
+    margin-left: 900px;
+    border: none;
+}
+.dietcalendar-list{
+    display: grid;
+    height: 800px;
+    margin-top: 50px; 
+    width: 1300px; /* 그리드 너비 설정 */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); /* 그리드 행 설정 */
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1 ;
+}
+.dietcalendar-item {
+    border: 1px solid #ffcc6d;
+    border-radius: 20px; /* 둥근 모서리를 더욱 강조 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* 배경색 변경 */
+
+    padding: 20px; /* 내부 패딩 추가 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+}
+.dietcalendar-bottom {
+    position: flex; /* 고정 위치 */
+    width: 100%; /* 전체 너비를 차지하도록 설정 */
+    display: flex; /* 버튼들을 가로로 배열 */
+    justify-content: center; /* 버튼들을 가운데 정렬 */
+    margin-top: 150px;
+}
+.dietcalendar-button{
+    width: 30px;
+    height: 30px;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-content {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.model-close{
+    position: absolute;
+    top: 10px !important;
+    right: 10px !important;
+    cursor: pointer;
+    border: none;
+    background:none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+}
+.modal-text{
+    margin-top: 25px;
+}

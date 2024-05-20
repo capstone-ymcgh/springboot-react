@@ -5,18 +5,28 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #    각자 PC에 만들어놓은 Database이름을 써야 합니다.
-    url: jdbc:mysql://localhost:3306/db_capstone?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    #    mysql에 생성한 사용자 계정 정보를 써야 합니다.
-    username: springboot_root
-    password: 0116
+
+    url: jdbc:mysql://localhost:3306/db_capstone_mem
+    #mysql에 생성한 사용자 계정 정보를 써야 합니다.
+    username: jjm_capstone
+    password: pigeon5238!!
   thymeleaf:
     cache: false
 
   # spring data jpa 설정
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     open-in-view: false
     show-sql: true
     hibernate:
       ddl-auto: update
+
+jwt:
+  header: "Authorization"
+  prefix: "Bearer "
+  secret: 25b7b35272a89c734283cc614a9c84e801dec1cbb43dc09d0cddb03f2b9729ad2c0c6ea959597cbe0fb89d7ab145c0b2638d46a31cd347ea09cb9193e70c55c6
+
+  tokenExpirationTime: 18000
+
+project:
+  folderPath: "D:/springboot/capstone_project"

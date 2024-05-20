@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.left-button {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 40%;
+    border: none;
+    background: none;
+}
+.add-button,.right-button{
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 40%;
+    border: none;
+    background: none;
+}
+.save{
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    position: fixed;
+    right: 70px;
+    bottom: 30px;
+    border: none;
+    background: #ffdd87;
+    border-radius: 50px;
+    color: white;
+}
+.recipename{
+    margin-top: 130px;
+}
+.recipename-t{
+    width: 300px;
+    height: 50px;
+}

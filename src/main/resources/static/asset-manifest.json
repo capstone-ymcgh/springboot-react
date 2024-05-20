@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a811a19a.css",
+    "main.js": "/static/js/main.54cb17e2.js",
+    "static/js/453.63834957.chunk.js": "/static/js/453.63834957.chunk.js",
+    "static/media/header_img.png": "/static/media/header_img.87c84a24f79531681564.png",
+    "static/media/Cafe24Ohsquare-v2.0.ttf": "/static/media/Cafe24Ohsquare-v2.0.e96058105e33acf67172.ttf",
+    "static/media/—Pngtree—magnifying glass icon_4681976.png": "/static/media/—Pngtree—magnifying glass icon_4681976.87157d48462fb62dd5f1.png",
+    "index.html": "/index.html",
+    "main.a811a19a.css.map": "/static/css/main.a811a19a.css.map",
+    "main.54cb17e2.js.map": "/static/js/main.54cb17e2.js.map",
+    "453.63834957.chunk.js.map": "/static/js/453.63834957.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a811a19a.css",
+    "static/js/main.54cb17e2.js"
+  ]
+}

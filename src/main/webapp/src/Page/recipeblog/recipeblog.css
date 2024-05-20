@@ -1,0 +1,195 @@
+body {
+    font-family: 'MyFont'; /* use 'MyFont' and fall back to 'sans-serif' if 'MyFont' is not available */
+}
+.recipePage{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:130px;
+    font-size: 40px;
+}
+.grid-container {
+    border: 1px solid #ddd; /* 태두리 색상 설정 */
+    padding: 20px; /* 내부 패딩 설정 */
+    margin: 20px; /* 외부 마진 설정 */
+    width: 1350px; /* 그리드 너비 설정 */
+    height: 1700px;
+    background-color: white;
+}
+.recipe-grid {
+    width: 1300px; /* 그리드 너비 설정 */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1 ;
+}
+.click-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 40px;
+}
+.button-d{
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    align-items: center;
+    background-color: #ffcc6d;
+    border-radius: 5px;
+    color:white;
+    font-size: 15px;
+    font-weight: 800;
+    justify-content:center;
+}
+.recipe-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    width: 300px; /* 카드의 너비 설정 */
+    height: 300px; /* 카드의 높이 설정 */
+    overflow: hidden; /* 내용이 카드의 크기를 초과하면 숨김 */
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-img {
+    margin: -10px 0 0 -10px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+}
+
+
+.recipe-item h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.recipe-item p {
+    margin: 0;
+    color: #666;
+}
+
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.button-Catagory {
+    background-color: bisque;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    background-image: url('/public/—Pngtree—magnifying glass icon_4681976.png');
+    background-size:80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.search-resualt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 35px;
+
+}
+.button-Catagory:hover {
+    background-color: #ffce46;
+}
+
+.search-text {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 500px;
+    height: 70px;
+    font-size: 25px;
+}
+.recipe-search{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+}
+.recipe-Category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.recipe-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: fixed; /* 요소를 고정 위치에 배치 */
+    right: 0; /* 오른쪽에 배치 */
+    bottom: 30%; /* 상단에서 50% 위치에 배치 */
+    transform: translateY(-50%); /* Y축으로 -50% 이동하여 정확히 중앙에 배치 */
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc6d;
+    cursor: pointer;
+    color:white;
+    font-size: 15px;
+    font-weight: 800;
+}
+.recipe-add:hover {
+    background-color: #ff9f05;
+}
+.recipe-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 80px;
+
+}
+.left{
+    display: flex;
+    position: static;
+    width: 20px;
+    height: 20px;
+}
+.pageNumber{
+    margin: 0 10px; /* Adjust as needed */
+}
+
+.recipePage-bottom{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.recipePage-bottom-button{
+    background-color: white;
+    border-color: #ff9f05;
+    box-shadow: none;
+    width: 30px;
+    height: 30px;
+}

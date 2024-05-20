@@ -1,104 +1,58 @@
 package com.capstone.capstone_project.controller;
 
-import org.springframework.ui.Model;
-import com.capstone.capstone_project.dto.MemberDTO;
-import com.capstone.capstone_project.service.MemberService;
-import jakarta.servlet.http.HttpSession;
+import com.capstone.capstone_project.dto.request.member.MemberLoginDTO;
+import com.capstone.capstone_project.dto.request.member.MemberUpdateDTO;
+import com.capstone.capstone_project.dto.response.member.MemberTokenDTO;
+import com.capstone.capstone_project.entity.MemberEntity;
+import com.capstone.capstone_project.service.MemberSerivce;
+import com.capstone.capstone_project.dto.request.member.MemberRegisterDTO;
+import com.capstone.capstone_project.dto.response.member.MemberResponseDTO;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Map;
 
-@Controller
+@RestController
+@RequestMapping("/user")
 @RequiredArgsConstructor
 public class MemberController {
-    // 생성자 주입
-    private final MemberService memberService;
+    private final MemberSerivce memberService;
 
-    // 회원가입 페이지 출력 요청
-    @GetMapping("/member/save")
-    public String saveForm() {
-        return "save";
+    @GetMapping("/checkId")
+    public ResponseEntity<?> checkIdDuplicate(@RequestParam String email) {
+        memberService.checkIdDuplicate(email);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
-    @PostMapping("/member/save")
-    public String save(@ModelAttribute MemberDTO memberDTO) {
-        System.out.println("MemberController.save");
-        System.out.println("memberDTO = " + memberDTO);
-        memberService.save(memberDTO);
-        return "login";
+    @PostMapping("/register")
+    public ResponseEntity<MemberResponseDTO> register(@RequestBody MemberRegisterDTO memberRegisterDTO) {
+        MemberResponseDTO successMember = memberService.register(memberRegisterDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(successMember);
     }
 
-    @GetMapping("/member/login")
-    public String loginForm() {
-        return "login";
+    @PostMapping("/login")
+    public ResponseEntity<MemberTokenDTO> login(@RequestBody MemberLoginDTO memberLoginDTO) {
+        MemberTokenDTO loginDTO = memberService.login(memberLoginDTO);
+        return ResponseEntity.status(HttpStatus.OK).header(loginDTO.getToken()).body(loginDTO);
     }
 
-    @PostMapping("/member/login")
-    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session) {
-        MemberDTO loginResult = memberService.login(memberDTO);
-        if (loginResult != null) {
-            // login 성공
-            session.setAttribute("loginEmail", loginResult.getMemberEmail());
-            return "main";
-        } else {
-            // login 실패
-            return "login";
-        }
+    @PostMapping("/checkPwd")
+    public ResponseEntity<MemberResponseDTO> check(
+            @AuthenticationPrincipal MemberEntity member,
+            @RequestBody Map<String, String> request) {
+        String password = request.get("password");
+        MemberResponseDTO memberInfo = memberService.check(member, password);
+        return ResponseEntity.status(HttpStatus.OK).body(memberInfo);
     }
 
-    @GetMapping("/member/")
-    public String findAll(Model model) {
-        List<MemberDTO> memberDTOList = memberService.findAll();
-        // 어떠한 html로 가져갈 데이터가 있다면 model사용
-        model.addAttribute("memberList", memberDTOList);
-        return "list";
+    @PutMapping("/update")
+    public ResponseEntity<MemberResponseDTO> update(
+            @AuthenticationPrincipal MemberEntity member,
+            @RequestBody MemberUpdateDTO memberUpdateDTO) {
+        MemberResponseDTO memberUpdate = memberService.update(member, memberUpdateDTO);
+        return ResponseEntity.status(HttpStatus.OK).body(memberUpdate);
     }
-
-    @GetMapping("/member/{id}")
-    public String findById(@PathVariable Long id, Model model) {
-        MemberDTO memberDTO = memberService.findById(id);
-        model.addAttribute("member", memberDTO);
-        return "detail";
-    }
-
-    @GetMapping("/member/update")
-    public String updateForm(HttpSession session, Model model) {
-        String myEmail = (String) session.getAttribute("loginEmail");
-        MemberDTO memberDTO = memberService.updateForm(myEmail);
-        model.addAttribute("updateMember", memberDTO);
-        return "update";
-    }
-
-    @PostMapping("/member/update")
-    public String update(@ModelAttribute MemberDTO memberDTO) {
-        memberService.update(memberDTO);
-        return "redirect:/member/" + memberDTO.getId();
-    }
-
-    @GetMapping("/member/delete/{id}")
-    public String deleteById(@PathVariable Long id) {
-        memberService.deleteById(id);
-        return "redirect:/member/";
-    }
-
-    @GetMapping("/member/logout")
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "index";
-    }
-
-    @PostMapping("/member/email-check")
-    public @ResponseBody String emailCheck(@RequestParam("memberEmail") String memberEmail) {
-        System.out.println("memberEmail = " + memberEmail);
-        String checkResult = memberService.emailCheck(memberEmail);
-        return checkResult;
-//        if (checkResult != null) {
-//            return "ok";
-//        } else {
-//            return "no";
-//        }
-    }
-
 }

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+/* 
+.topMenu{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffcc6d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+    z-index: 999;
+    top:0;
+} */
+/* .logo {
+    background-color: #000;
+    background-image: url('logo.png');
+    background-size: 100px;     
+}
+.login{
+    text-decoration: none;  border-style: solid;    border-width: 15px 25px;    border-radius: 10px;    border-color:#c4ff6c;
+    margin-right: 60px;    background-color:#c4ff6c ; color:white;
+} */
+/* .login>a{
+    text-decoration: none;    border:none;   font-size: 20px;    color:white; font-size: 20px;
+} */
+/* .login:hover{
+    border-color:white;background-color:white; color:#ffcc6d; 
+}
+.tpMenu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color:white;
+    font-size: 20px;
+}
+.tpMenu :active{
+    padding: 2px;
+    border-bottom: 2px solid white;
+} */
+
+.topMenu {
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffca2a;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left:50px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.logo-img{
+    width: 100%;
+    height: auto;
+}
+
+.tpMenu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 150px 0 0;
+}
+
+.tpMenu li {
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color:#333;
+    font-weight: 1000;
+}
+
+.tpMenu li.active {
+    
+}
+
+.login {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 30px;
+    font-weight: 1000;
+}

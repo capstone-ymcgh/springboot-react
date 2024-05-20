@@ -1,0 +1,58 @@
+/* UserInfo.css */
+
+.user-info-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    margin-top: 130px;
+    width: 1300px;
+}
+.user-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 200px;
+    background-color: red;
+}
+
+.user-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 700px;
+}
+
+.user-info-main label {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+}
+
+.user-info-main button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-info-main button:hover {
+    background-color: #45a049;
+}
+.user-text{
+    font-size: 20px;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,352 @@
+/*#1 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*#2 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*#3 */
+.material-icons {
+    /* button 요소에 기본적으로 설정되는 스타일 속성 초기화 */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 3em;
+}
+
+/*#4 */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: #008aff; */
+}
+
+/*#5 */
+.wrapper {
+    margin-top: 100px;
+    width: 1200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/*#6*/
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: 100px;
+}
+.wrapper .nav .current-date {
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+.wrapper .nav button {
+    width: 38px;
+    height: 38px;
+    font-size: 30px;
+    color: #ffcc6d;
+}
+.calendar div {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.calendar .weeks div {
+    font-weight: 500;
+    text-decoration: none;
+}
+.calendar .days {
+    margin-bottom: 20px;
+}
+.calendar div div {
+    /*#8*/
+    width: calc(100% / 7);
+    /*#9*/
+    position: relative;
+    text-decoration: none;
+    height: 150px;
+    transition: transform 0.3s ease-in-out; /* 애니메이션 효과를 부드럽게 만듭니다. */
+}
+.non-current-month:hover {
+    transform: none;
+}
+.calendar div .days {
+    /*#8*/
+    width: calc(100% / 7);
+    /*#9*/
+    position: relative;
+    text-decoration: none;
+    height: 150px;
+    transition: transform 0.3s ease-in-out; /* 애니메이션 효과를 부드럽게 만듭니다. */
+    display: flex; /* Flexbox를 사용합니다. */
+    justify-content: center; /* 가로 방향으로 중앙 정렬합니다. */
+    align-items:top; /* 세로 방향으로 중앙 정렬합니다. */
+}
+.calendar.days div{
+    border: 1px solid black;
+}
+
+/*#11*/
+.days div.active {
+    color: #aaa;
+    border: 1px solid black;
+    background-color: gray;
+}
+.days div.inactive div {
+    display: none;
+    pointer-events: none;
+}
+
+.days div.active {
+    color: #fff;
+    
+    
+}
+.calendar .days div::before {
+    position: absolute;
+    content: '';
+    height: 40px; 
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+.days .current-month:hover {
+    transform: scale(1.5);
+    border: 1px solid black; /* 검은색 1px 태두리 추가 */
+    box-shadow: 0 0 10px black; /* 검은색 그림자 추가 */
+    z-index: 10;
+    background-color: white;
+}
+.days div.active::before {
+    background: #008aff;
+}
+.current-month {
+    color: black;
+}
+.days div.menu{
+    
+    margin-top: 20px;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    width: auto;
+    height: 15px;
+    writing-mode: horizontal-tb;
+    display: block;
+}
+.days div.menu div{
+    font-size: 10px;
+    text-decoration: none;
+    border: none;
+    width: auto;
+    height: 15px;    
+}
+.days div.menu:hover ,.days div.menu div:hover {
+    transform: none;
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+}
+/* .sellectmenu{
+    z-index: 999;
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+        width: 50vw;
+    height: 500px;
+    background-color: #ffcc6d;
+} */
+
+ .Close{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    color:white;
+    font-size:20px;
+}
+
+/*.MD{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 100%;
+    font-size: 2em;
+    height: 50px;
+}
+.MenuContainer {
+    
+    padding-top:50px;
+}
+.MenuText{
+    position: relative;
+    width: 400px;
+    left: 50px;
+    font-size: 2em;
+}
+.SearchData{
+    background-color: white;
+    width: 225px;
+    height: 100px;
+}
+.MenuSearch{
+    position: relative; 
+        top: -150px; 
+    float: right;
+    width: 268px;
+    font-size: 1.5em;
+} */
+/* .Button{
+    margin-right: -210px;
+    width: 200px;
+    height: 48px;
+    float: right;
+    text-align: center;
+    height: 48px;
+    border: none;
+    font-weight: bold;
+    border-radius: 64px;
+    background-color: #fbff00;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.InputText{
+    outline: none;
+	border: none;
+    height: 17px;
+    font-size: 14px;
+	font-weight: 400;
+} */
+/* CSS 코드 */
+.sellectmenu {
+    background-color: #f9ff9f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    color: black;
+    z-index: 999;
+    position: fixed; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60vw;
+    height: 400px;
+
+}
+
+.Close {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.sellectmenu .MenuContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sellectmenu .MenuText {
+    font-size: 1em;
+}
+.MD{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-size: 40px;
+    height: 80px;
+}
+.sellectmenu .MenuSearch {
+    width: 50%;
+}
+
+.sellectmenu .MenuSearch .InputText {
+    width: 80%;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color:black;
+}
+
+.Button-ss {
+    background-color: #ffca2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 50px;
+}
+.textsearch{
+    background-image: url('/public/—Pngtree—magnifying glass icon_4681976.png');
+    background-size:80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 18px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 30px;
+    background-color: #ffcc6d;
+
+}
+.Button-save{
+    width: 250px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #ffca2a;
+    border-style: none;
+    color:white;
+    font-size: 20px;
+}
+.Left-B{
+    width: 80px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #ffca2a;
+    border-style: none;
+    color:white;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.Right-B{
+    width: 80px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #ffca2a;
+    border-style: none;
+    color:white;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+}
