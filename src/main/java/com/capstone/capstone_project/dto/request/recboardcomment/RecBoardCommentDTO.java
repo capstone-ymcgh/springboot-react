@@ -2,7 +2,7 @@ package com.capstone.capstone_project.dto.request.recboardcomment;
 
 
 /*
- * 댓글 등록, 수정 요청
+ * 댓글 등록, 수정 요청.
  * MemberEntity, Board는 URI Resource로 받는다
  */
 
