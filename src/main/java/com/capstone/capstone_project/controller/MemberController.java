@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
+/*
+ * 회원 관련 기능을 처리하는 컨트롤러
+ */
+
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
