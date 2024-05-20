@@ -7,6 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/*
+ * 파일 다운로드를 위한 DTO
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor
