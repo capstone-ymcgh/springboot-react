@@ -17,6 +17,10 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
+/*
+ * 파일 업로드, 다운로드 및 삭제를 처리하는 게시판 파일 컨트롤러
+ */
+
 @RestController
 @RequestMapping("/board/{boardId}/file")
 @RequiredArgsConstructor
