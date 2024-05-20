@@ -20,6 +20,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+/*
+ * 레시피 게시판 기능을 처리하는 컨트롤러
+ */
+
 @RestController
 @RequestMapping("/board")
 @RequiredArgsConstructor
