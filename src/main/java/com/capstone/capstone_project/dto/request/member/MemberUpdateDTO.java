@@ -1,6 +1,6 @@
 package com.capstone.capstone_project.dto.request.member;
 
-// 회원 정보 변경
+// 회원 정보 변경.
 
 import lombok.Builder;
 import lombok.Getter;
