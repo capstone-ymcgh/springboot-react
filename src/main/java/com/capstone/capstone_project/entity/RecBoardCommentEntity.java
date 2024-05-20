@@ -7,6 +7,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/*
+ * 게시글 댓글을 나타내는 entity
+ */
+
 @Entity
 @Getter
 @NoArgsConstructor
