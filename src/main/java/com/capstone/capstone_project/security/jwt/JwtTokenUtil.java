@@ -13,6 +13,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+/*
+ * JwtTokenUtil은 JWT 토큰을 생성하고, 검증하며, 토큰에서 필요한 정보를 추출하는 데 사용
+ * generateToken: UserDetails 객체에서 사용자 정보를 추출하여 클레임을 생성, 이를 이용하여 JWT 토큰을 생성
+ * doGenerateToken: JWT 토큰의 클레임을 정의하고, 해당 클레임을 이용하여 토큰을 생성한다, 생성된 토큰에는 발급 시간과 만료 시간이 설정
+ * validateToken: 주어진 토큰의 유효성을 검증, 토큰의 유효성은 토큰의 만료 여부와 주어진 UserDetails 객체의 유효성을 확인하여 결정
+ * 다양한 보조 메서드들을 통해 토큰에서 사용자 이름, 만료 시간 등의 정보를 추출 가능
+ */
+
 @Component
 public class JwtTokenUtil {
     private static final long serialVersionUID = -2550185165626007488L;
